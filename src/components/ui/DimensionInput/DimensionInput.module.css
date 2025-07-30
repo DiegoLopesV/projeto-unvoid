@@ -1,0 +1,271 @@
+/* Main container */
+.container {
+  /* Layout automático */
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0px;
+
+  width: 261px;
+  height: 36px;
+
+  background: linear-gradient(94.68deg, rgba(250, 250, 250, 0.05) 9.22%, rgba(255, 255, 255, 0.02) 90.35%);
+  box-shadow: 0px 4.61646px 46.1646px rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(7.5px);
+  /* Observação: filtro de pano de fundo tem suporte de navegação mínimo */
+  border-radius: 8px;
+
+  /* Auto layout por dentro */
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+}
+
+/* label-wrapper */
+.labelWrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 0px 8px;
+  width: 45px;
+  height: 36px;
+  flex: none;
+  order: 0;
+  align-self: stretch;
+  flex-grow: 0;
+}
+
+/* Scale */
+.label {
+  width: 33px;
+  height: 8px;
+  font-family: var(--font-kanit), Arial, sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 13px;
+  line-height: 115%;
+  text-transform: capitalize;
+  color: #5A5A5E;
+  flex: none;
+  flex-grow: 0;
+  text-align: left; /* Garantindo alinhamento à esquerda */
+  padding-bottom: 15px; /* Adicionando padding-bottom para a palavra Scale */
+}
+
+/* text-field */
+.textField {
+  /* Layout automático */
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0px 8px;
+  gap: 8px;
+
+  width: 78px;
+  height: 36px;
+
+  /* Auto layout por dentro */
+  flex: none;
+  order: 1;
+  flex-grow: 0;
+}
+
+/* text-field (segundo) */
+.textField:nth-of-type(2) {
+  width: 77px;
+  order: 2;
+}
+
+/* label */
+.inputLabel {
+  /* Layout automático */
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 0px;
+
+  width: 10px;
+  height: 36px;
+
+  /* Auto layout por dentro */
+  flex: none;
+  order: 0;
+  align-self: stretch;
+  flex-grow: 0;
+
+  /* Type@37 */
+  width: 10px;
+  height: 15px;
+
+  font-family: var(--font-kanit), Arial, sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 115%;
+
+  /* Main/Platinum White */
+  color: #FAFAFA;
+}
+
+/* label (segundo) */
+.textField:nth-of-type(2) .inputLabel {
+  width: 9px;
+}
+
+/* field */
+.field {
+  box-sizing: border-box;
+
+  /* Layout automático */
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 8px 16px;
+  gap: 12px;
+
+  width: 52px;
+  height: 28px;
+
+  background: linear-gradient(94.68deg, rgba(255, 255, 255, 0.075) 9.22%, rgba(255, 255, 255, 0.03) 90.35%);
+  box-shadow: 0px 4.61646px 46.1646px rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(7.5px);
+  border-radius: 8px;
+
+  /* Auto layout por dentro */
+  flex: none;
+  order: 1;
+  flex-grow: 0;
+}
+
+.input {
+  /* Type@37 */
+  width: 20px;
+  height: 12px;
+
+  font-family: var(--font-kanit), Arial, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 100%;
+  display: flex;
+  align-items: center;
+  text-align: center;
+
+  color: #747474;
+  background: transparent;
+  border: none;
+  outline: none;
+
+  /* Auto layout por dentro */
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+}
+
+.input:focus {
+  outline: none;
+}
+
+.input::-webkit-outer-spin-button,
+.input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.input[type=number] {
+  -moz-appearance: textfield;
+}
+
+/* divider */
+.divider {
+  width: 1px;
+  height: 36px;
+
+  /* Gray/#464649 */
+  background: #464649;
+
+  /* Auto layout por dentro */
+  flex: none;
+  order: 3;
+  flex-grow: 0;
+  
+  /* Adicionando margem para não ficar colado */
+  margin: 0 8px;
+}
+
+/* opt */
+.opt {
+  /* Layout automático */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0px 12px;
+
+  width: 48px;
+  height: 36px;
+
+  /* Auto layout por dentro */
+  flex: none;
+  order: 4;
+  align-self: stretch;
+  flex-grow: 0;
+}
+
+/* state-layer */
+.stateLayer {
+  /* Layout automático */
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 4px;
+  gap: 8px;
+
+  width: 24px;
+  height: 24px;
+
+  border-radius: 4px;
+
+  /* Auto layout por dentro */
+  flex: none;
+  order: 0;
+  align-self: stretch;
+  flex-grow: 0;
+}
+
+/* confirm button */
+.confirmButton {
+  /* Layout automático */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0px 12epx;
+
+
+  width: 48px;
+  height: 36px;
+
+  /* Auto layout por dentro */
+  flex: none;
+  order: 4;
+  align-self: stretch;
+  flex-grow: 0;
+  
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  margin: 0;
+}
+
+.confirmButton:hover {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 4px;
+}
+
+.confirmButton:active {
+  transform: scale(0.95);
+} 
