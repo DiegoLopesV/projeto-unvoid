@@ -1,19 +1,35 @@
 # Unvoid Chess Game
 
-## Visão Geral do Projeto
+[![Next.js](https://img.shields.io/badge/Next.js-15.3.1-black)](https://nextjs.org/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-5.0-blue)](https://www.typescriptlang.org/)
+[![React](https://img.shields.io/badge/React-19.0.0-blue)](https://reactjs.org/)
+[![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
+
+## 🎮 Visão Geral do Projeto
 
 Unvoid Chess Game é uma aplicação de xadrez customizado que permite aos jogadores definir dimensões personalizadas do tabuleiro (6x6 até 12x12) e jogar com peças que representam diferentes roles de desenvolvimento: Product Owner, Developer e Designer. O objetivo é capturar o Product Owner do adversário para vencer.
 
-## Tech Stack
+### ✨ Features Implementadas
 
-- **Framework**: Next.js 15.3.1
-- **Linguagem**: TypeScript
+- ✅ **Tabuleiro Customizável**: Dimensões de 6x6 a 12x12
+- ✅ **Peças com Roles de Desenvolvimento**: Product Owner, Developer, Designer
+- ✅ **Tela de Vitória Animada**: Interface moderna com estrela e efeitos visuais
+- ✅ **Controles Responsivos**: Interface adaptável para diferentes telas
+- ✅ **Indicadores Visuais**: Bolinhas laranja para movimentos válidos
+- ✅ **Inputs Inteligentes**: Campos de texto com estados e validação
+- ✅ **Design Moderno**: Interface escura com gradientes e blur effects
+- ✅ **Tipagem Completa**: TypeScript 100% tipado
+
+## 🛠️ Tech Stack
+
+- **Framework**: [Next.js 15.3.1](https://nextjs.org/)
+- **Linguagem**: [TypeScript 5.0](https://www.typescriptlang.org/)
 - **Estilização**: CSS Modules
-- **Componentes**: React 19.0.0
+- **Componentes**: [React 19.0.0](https://reactjs.org/)
 - **Imagens**: Next.js Image Component
 - **Fonte**: Kanit (Google Fonts)
 
-## Como Executar
+## 🚀 Como Executar
 
 ### Pré-requisitos
 - Node.js (versão 18 ou superior)
@@ -21,6 +37,10 @@ Unvoid Chess Game é uma aplicação de xadrez customizado que permite aos jogad
 
 ### Execução Local
 ```bash
+# Clonar o repositório
+git clone <repository-url>
+cd unvoid-chess-game
+
 # Instalar dependências
 npm install
 
@@ -43,7 +63,7 @@ docker run -p 3000:3000 unvoid-chess-game
 sh ./main.sh
 ```
 
-## Estrutura do Projeto
+## 📁 Estrutura do Projeto
 
 ```
 src/
@@ -69,7 +89,7 @@ src/
     └── chessLogic.ts         # Lógica do jogo
 ```
 
-## Plano de Componentização
+## 🎯 Plano de Componentização
 
 ### Componentes de UI Fundamentais (/components/ui)
 
@@ -113,7 +133,7 @@ src/
 - **Descrição**: Componente principal que gerencia todo o jogo
 - **Funcionalidade**: Orquestra a lógica do jogo, estados e interações
 
-## Regras do Jogo
+## 🎲 Regras do Jogo
 
 ### Dimensões do Tabuleiro
 - **Permitidas**: 6x6 até 12x12 (qualquer combinação)
@@ -122,16 +142,17 @@ src/
 
 ### Peças e Movimentos
 
-#### Product Owner
+#### Product Owner 👑
 - **Movimento**: 1 quadrado em qualquer direção (vertical, horizontal, diagonal)
 - **Captura**: Move sobre a peça adversária
+- **Objetivo**: Proteger esta peça - sua captura significa derrota
 
-#### Developer
+#### Developer 💻
 - **Movimento**: Até 3 quadrados em qualquer direção
 - **Captura**: Pula sobre a peça adversária
 - **Restrição**: Não pode pular sobre peças ocupadas
 
-#### Designer
+#### Designer 🎨
 - **Movimento**: Forma de "L" (2 quadrados em uma direção, 1 perpendicular)
 - **Captura**: Move sobre a peça adversária
 
@@ -143,7 +164,7 @@ src/
 ### Objetivo
 Capturar o Product Owner do adversário para vencer o jogo.
 
-## Características Técnicas
+## 🎨 Características Técnicas
 
 ### Responsividade
 - Design mobile-first com breakpoints em 768px e 1024px
@@ -168,38 +189,52 @@ Capturar o Product Owner do adversário para vencer o jogo.
 - Tipos específicos para lógica de jogo
 - Sem uso de `any` em todo o código
 
-## Checklist de Qualidade Final
+## 🚧 Roadmap
 
-### ✅ Princípio da Responsabilidade Única
-- Cada componente tem um propósito claro e específico
-- Separação clara entre UI, layout e lógica de negócio
+### Próximas Features
+- [ ] **Sistema de Pontuação**: Histórico de vitórias e estatísticas
+- [ ] **Modo Multiplayer**: Jogo online em tempo real
+- [ ] **Temas Visuais**: Múltiplas opções de cores e estilos
+- [ ] **Sons e Efeitos**: Feedback auditivo para movimentos
+- [ ] **Tutorial Interativo**: Guia para novos jogadores
+- [ ] **Modo IA**: Jogar contra computador
+- [ ] **Salvamento de Jogos**: Continuar partidas salvas
+- [ ] **Ranking**: Sistema de classificação de jogadores
 
-### ✅ Reutilização Garantida
-- Componentes "burros" que recebem dados via props
-- Sem dados hardcoded nos componentes
-- Lógica de negócio isolada em utils
+### Melhorias Técnicas
+- [ ] **PWA**: Progressive Web App com cache offline
+- [ ] **Testes**: Unit tests e integration tests
+- [ ] **CI/CD**: Pipeline de deploy automatizado
+- [ ] **Analytics**: Métricas de uso e performance
 
-### ✅ Tipagem 100% Segura
-- Todas as props fortemente tipadas
-- Interfaces TypeScript bem definidas
-- Sem uso de `any` em todo o código
+## 🤝 Contribuindo
 
-### ✅ Renderização Pura
-- Componentes funcionais com props imutáveis
-- Mesmo input sempre produz mesmo output
-- Estados gerenciados adequadamente
+Contribuições são bem-vindas! Para contribuir:
 
-### ✅ Acessibilidade Verificada
-- Tags semânticas corretas
-- Elementos interativos acessíveis
-- Estados visuais claros
+1. Fork o projeto
+2. Crie uma branch para sua feature (`git checkout -b feature/AmazingFeature`)
+3. Commit suas mudanças (`git commit -m 'Add some AmazingFeature'`)
+4. Push para a branch (`git push origin feature/AmazingFeature`)
+5. Abra um Pull Request
 
-### ✅ Responsividade Implementada
-- Design mobile-first
-- Breakpoints adequados
-- Adaptação fluida a diferentes telas
+### Padrões de Código
+- Use TypeScript para todo novo código
+- Siga as convenções de nomenclatura existentes
+- Mantenha a estrutura de componentes organizada
+- Adicione testes para novas funcionalidades
 
-### ✅ Código Limpo
-- JSX bem formatado e legível
-- Nomes de props e variáveis claros
-- Comentários apenas onde necessário
+## 📄 Licença
+
+Este projeto está licenciado sob a Licença MIT - veja o arquivo [LICENSE](LICENSE) para detalhes.
+
+## 📞 Contato
+
+- **Projeto**: [Unvoid Chess Game](https://github.com/seu-usuario/unvoid-chess-game)
+- **Issues**: [GitHub Issues](https://github.com/seu-usuario/unvoid-chess-game/issues)
+
+---
+
+<div align="center">
+  <p>Feito com ❤️ pela equipe Unvoid</p>
+  <p>⭐ Se este projeto te ajudou, considere dar uma estrela!</p>
+</div>
